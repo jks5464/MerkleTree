@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
-public class hashFunction {
+public class hashFunction{
 
 	//private String hashroot;
 	
