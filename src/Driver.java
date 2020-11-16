@@ -10,13 +10,33 @@
  mismatch, the program will output which files are not the same.
 */
 
+import java.util.Arrays;
+import java.util.*;
+
 public class Driver {
 
 	public static void main(String[] args) {
 		
-		int arr[] = {0,1,2,3,4,5,6,7,8,9};
+		//User input 2 files
 		
-		System.out.println(arr[5]);
+		ArrayList<String> arrlist = new ArrayList<String>();
+		ArrayList<String> arrlist2 = new ArrayList<String>();
+		
+		arrlist.add("1");
+		arrlist.add("2");
+		arrlist.add("3");
+		arrlist.add("4");
+		arrlist.add("5");
+		
+		arrlist2.add("1");
+		arrlist2.add("2");
+		arrlist2.add("3");
+		arrlist2.add("4");
+		arrlist2.add("5");
+
+		hashFunction y = new hashFunction();
+		System.out.println(y.hasher(arrlist));
+		System.out.println(y.hasher(arrlist2));
 
 	}
 
