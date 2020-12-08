@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+//uses abstraction to implement the addition operation on an arraylist
 public class addData extends Operations {
 
 	public ArrayList<String> applyAll(ArrayList<String> x, int y) {

@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class multiplyData {
+//uses abstraction to implement the multiplication operation on an arraylist
+public class multiplyData extends Operations {
+	
 	public ArrayList<String> applyAll(ArrayList<String> x, int y) {
 		int intValue;
 		for(int i = 0; i < x.size(); i++) {

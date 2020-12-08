@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class InOut {
-	
-	public ArrayList<String> readData(String filename) {
+	//allows us to read data from a file
+	public static ArrayList<String> readData(String filename) {
 		try {
 			ArrayList<String> arrData = new ArrayList<String>();
 		    File myObj = new File(filename);
@@ -22,8 +22,8 @@ public class InOut {
 		    return null;
 		}
 	}
-	
-	public void writeData(String filename, ArrayList<String> x) {
+	//allows us to write data(and arraylist) to a file
+	public static void writeData(String filename, ArrayList<String> x) {
 		try {
 			  FileWriter myWriter = new FileWriter(filename);
 			  for(int i = 0; i < x.size(); i++) {

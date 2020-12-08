@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class divideData {
+//uses abstraction to implement the division operation on an arraylist
+public class divideData extends Operations{
 	public ArrayList<String> applyAll(ArrayList<String> x, int y) {
 		int intValue;
 		for(int i = 0; i < x.size(); i++) {

@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class subtractData {
+//uses abstraction to implement the subtraction operation on an arraylist
+public class subtractData extends Operations{
+	
 	public ArrayList<String> applyAll(ArrayList<String> x, int y) {
 		int intValue;
 		for(int i = 0; i < x.size(); i++) {
