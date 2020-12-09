@@ -117,6 +117,20 @@ public class Driver {
 		}
 		
 		Boolean cont = true;
+		
+		/*
+		ArrayList<Object> operators = new ArrayList<Object>();
+		addData a = new addData();
+		subtractData s = new subtractData();
+		multiplyData m = new multiplyData();
+		divideData d = new divideData();
+		
+		operators.add(a);
+		operators.add(s);
+		operators.add(m);
+		operators.add(d);
+		*/
+		
 		while(cont) {
 			System.out.println("Do you want to do any operations on the contents of solutions (file 1)?");
 			System.out.println("(1) Add \n(2) Subtract \n(3) Multiply \n(4) Divide \n(5) Skip");
@@ -130,40 +144,40 @@ public class Driver {
 				int modifier = Integer.parseInt(input.nextLine());
 				if(choice == 1) {
 					if(operationChoice == 1) {
-						addData a = new addData();
-						data1 = a.applyAll(data1, modifier);
+						addData x = new addData();
+						data1 = x.applyAll(data1, modifier);
 					}
 					else if(operationChoice == 2) {
-						subtractData a = new subtractData();
-						data1 = a.applyAll(data1, modifier);
+						subtractData x = new subtractData();
+						data1 = x.applyAll(data1, modifier);
 					}
 					else if(operationChoice == 3) {
-						multiplyData a = new multiplyData();
-						data1 = a.applyAll(data1, modifier);
+						multiplyData x = new multiplyData();
+						data1 = x.applyAll(data1, modifier);
 					}
 					else if(operationChoice == 4) {
-						divideData a = new divideData();
-						data1 = a.applyAll(data1, modifier);
+						divideData x = new divideData();
+						data1 = x.applyAll(data1, modifier);
 					}
 				}
 				else if(choice == 2) {
 					System.out.println("What is the index of the element you want to change (starts at 0)?");
 					int index = Integer.parseInt(input.nextLine());
 					if(operationChoice == 1) {
-						addData a = new addData();
-						data1 = a.apply(data1, modifier, index);
+						addData x = new addData();
+						data1 = x.apply(data1, modifier, index);
 					}
 					else if(operationChoice == 2) {
-						subtractData a = new subtractData();
-						data1 = a.apply(data1, modifier, index);
+						subtractData x = new subtractData();
+						data1 = x.apply(data1, modifier, index);
 					}
 					else if(operationChoice == 3) {
-						multiplyData a = new multiplyData();
-						data1 = a.apply(data1, modifier, index);
+						multiplyData x = new multiplyData();
+						data1 = x.apply(data1, modifier, index);
 					}
 					else if(operationChoice == 4) {
-						divideData a = new divideData();
-						data1 = a.apply(data1, modifier, index);
+						divideData x = new divideData();
+						data1 = x.apply(data1, modifier, index);
 					}
 				}
 				else {
@@ -177,7 +191,7 @@ public class Driver {
 				System.out.println("invalid input");
 			}
 			
-			System.out.println("Content of solutions (file 1");
+			System.out.println("Content of solutions (file 1)");
 			for(int i = 0; i < data1.size(); i++) {
 				System.out.println(data1.get(i));
 			}
@@ -191,20 +205,20 @@ public class Driver {
 			//creating collections sortable array
 			ArrayList<data> sortable = new ArrayList<data>();
 			for(int i = 0; i < data1.size(); i++) {
-				data d = new data(data1.get(i));
-				sortable.add(d);
+				data y = new data(data1.get(i));
+				sortable.add(y);
 			}
 			ArrayList<data> sortable2 = new ArrayList<data>();
 			for(int i = 0; i < data2.size(); i++) {
-				data d = new data(data2.get(i));
-				sortable2.add(d);
+				data y = new data(data2.get(i));
+				sortable2.add(y);
 			}
 			
 			Collections.sort(sortable);
 			Collections.sort(sortable2);
 			
 			//print content of sorted arrays and put sortable back into data arraylist
-			System.out.println("Content of sorted solutions (file 1");
+			System.out.println("Content of sorted solutions (file 1)");
 			for(int i = 0; i < sortable.size(); i++) {
 				System.out.println(sortable.get(i).getValue());
 				data1.set(i,sortable.get(i).getValue());
@@ -237,6 +251,7 @@ public class Driver {
 			System.out.println("The two arrays are not the same");
 		}
 		
+		input.close();
 	}
 
 }

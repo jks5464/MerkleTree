@@ -16,7 +16,8 @@ public class data implements Comparable<data> {
 		value = x;
 	}
 	
+	@Override
 	public int compareTo(data x) {
-		return this.getValue().compareTo(x.getValue());
+		return this.value.compareTo(x.value);
 	}
 }
